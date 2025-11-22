@@ -13,8 +13,7 @@ const validationSchema = Yup.object({
     .max(50, 'Maximum 50 characters')
     .required('Required field'),
   content: Yup.string()
-    .max(500, 'Maximum 500 characters')
-    .required('Required field'),
+    .max(500, 'Maximum 500 characters'),
   tag: Yup.mixed<NoteTag>()
     .oneOf(['Todo', 'Work', 'Personal', 'Meeting', 'Shopping'], 'Please select a valid tag')
     .required('Required field'),
